@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Illustration: header.jpg publication_list: True .. Subtitle: the mind is its own place, and in itself can make a heav&#39;n of hell, a hell of heav&#39;n. Sweet pants, ay? I study Electrical Engineering...">
+        <meta name="description" content="Sweet pants, ay? I study Electrical Engineering and Information Technology at the Technical University of Munich. I am interested in robotics, artificial intelligence, as well as theoretical &amp;...">
         <meta name="keywords" content="">
         <link rel="icon" href="/favicon.ico">
 
@@ -35,7 +35,7 @@
     <body>
 
         <!-- Header -->
-    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/header2.jpg'); background-position: center; background-size: cover;">
+    <div class="header-container" style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/header.jpg'); background-position: center; background-size: cover; ">
 
             <!-- Static navbar -->
             <div class="container">
@@ -71,10 +71,7 @@
 
         <!-- Content -->
     <div class="container content">
-        <p>Illustration: header.jpg
-publication_list: True
-.. Subtitle: the mind is its own place, and in itself can make a heav'n of hell, a hell of heav'n.</p>
-<div class="figure align-left" style="width: 250px; height: auto;">
+        <div class="figure align-left" style="width: 250px; height: auto;">
 <img alt="" src="/images/author.jpg" style="width: 250px; height: auto;"/>
 <p class="caption">Sweet pants, ay?</p>
 </div>
@@ -90,6 +87,12 @@ publication_list: True
 </ul>
 
 
+          <h1>Publications, Reports, and Theses </h1>
+          <table id="pubTable" class="display"></table>
+          <script>
+            bibtexify("/bib/ref.bib", "pubTable");
+          </script>
+          Generated with <a href="https://github.com/vkaravir/bib-publication-list ">this great tool</a>!
     </div>
         <!-- /Content --> 
 
