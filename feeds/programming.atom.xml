@@ -6,8 +6,8 @@
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifndef OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
 &lt;span class="cp"&gt;#define OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
 
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;quot;common.h&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
-&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;quot;IFilterFactory.h&amp;quot;&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;"common.h"&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;"IFilterFactory.h"&lt;/span&gt;&lt;span class="cp"&gt;&lt;/span&gt;
 
 &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;FilterFactory&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IFilterFactory&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;span class="k"&gt;public&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
