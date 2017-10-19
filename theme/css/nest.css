@@ -332,7 +332,7 @@ img.align-right {
     margin: 1em 0 1em 1em;
 }
 
-.figure {
+.content.figure {
     border: 1px solid #bbb;
     border-radius: 3px;
     padding: 4px;
@@ -340,14 +340,14 @@ img.align-right {
     margin: 0 1em 1em 0;
     box-shadow: 4px 4px 4px 0px rgba(128, 128, 128, 0.5);
 }
-.figure.align-right {
+.content.figure.align-right {
     float: right;
     margin: 0 0 1em 1em;
 }
-.figure.align-left {
+.content.figure.align-left {
     float: left;
 }
-.figure img {
+.content.figure img {
     border: none;
     border-radius: 0;
     padding: 0;
@@ -356,14 +356,14 @@ img.align-right {
 
     float: left;
 }
-.figure p.caption {
+.content.figure p.caption {
     margin: 0;
     font-size: 80%;
     padding: 4px;
     float: left;
     text-align: left;
 }
-.figure div.legend {
+.content.figure div.legend {
     padding: 4px;
     font-size: 80%;
     color: #aaa;
