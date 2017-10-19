@@ -317,6 +317,8 @@ h4:after {
     margin-bottom: 40px;
 }
 
+img, div.figure { max-width: 100%; height: auto; }
+
 /* Menu */
 .menu{
   font-size: 14px;
