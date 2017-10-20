@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>empyreum. - Programming</title><link href="http://dbadrian.github.io/" rel="alternate"></link><link href="http://dbadrian.github.io/feeds/programming.atom.xml" rel="self"></link><id>http://dbadrian.github.io/</id><updated>2014-05-01T10:35:00+02:00</updated><entry><title>First Programming Article</title><link href="http://dbadrian.github.io/first-programming-article.html" rel="alternate"></link><published>2014-05-01T10:35:00+02:00</published><updated>2014-05-01T10:35:00+02:00</updated><author><name>David B. Adrian</name></author><id>tag:dbadrian.github.io,2014-05-01:/first-programming-article.html</id><summary type="html">&lt;p&gt;Lets Test some math&lt;/p&gt;
-&lt;p&gt;The area of a circle is $e=mc^2$. Lorem ipsum dolor sit amet, consectetur adipiscing elit. $$x^2$$ Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lets Test some math&lt;/p&gt;
-&lt;p&gt;The area of a circle is $e=mc^2$. Lorem ipsum dolor sit amet, consectetur adipiscing elit. $$x^2$$ Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet. &lt;/p&gt;
-&lt;p&gt;\begin{equation} \label{eq} X^2 \end{equation}&lt;/p&gt;
-&lt;p&gt;Let's test some syntax highlighting for eq. $\ref{eq}$:&lt;/p&gt;
+&lt;p&gt;The area of a circle is &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;. Lorem ipsum dolor sit amet, consectetur adipiscing elit. &lt;/p&gt;
+&lt;div class="math"&gt;$$x^2$$&lt;/div&gt;
+&lt;p&gt; Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lets Test some math&lt;/p&gt;
+&lt;p&gt;The area of a circle is &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;. Lorem ipsum dolor sit amet, consectetur adipiscing elit. &lt;/p&gt;
+&lt;div class="math"&gt;$$x^2$$&lt;/div&gt;
+&lt;p&gt; Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet. &lt;/p&gt;
+&lt;div class="math"&gt;\begin{equation} \label{eq} X^2 \end{equation}&lt;/div&gt;
+&lt;p&gt;Let's test some syntax highlighting for eq. &lt;span class="math"&gt;\(\ref{eq}\)&lt;/span&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifndef OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
 &lt;span class="cp"&gt;#define OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
 
@@ -53,4 +57,59 @@
 
 &lt;span class="cp"&gt;#endif &lt;/span&gt;&lt;span class="c1"&gt;//OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Cool, ey?&lt;/p&gt;</content><category term="ubuntu"></category><category term="kernel"></category></entry></feed>
+&lt;p&gt;Cool, ey?&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</content><category term="ubuntu"></category><category term="kernel"></category></entry></feed>

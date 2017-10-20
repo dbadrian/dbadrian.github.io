@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Lets Test some math The area of a circle is $e=mc^2$. Lorem ipsum dolor sit amet, consectetur adipiscing elit. $$x^2$$ Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum...">
+        <meta name="description" content="Lets Test some math The area of a circle is \(e=mc^2\). Lorem ipsum dolor sit amet, consectetur adipiscing elit. $$x^2$$ Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum...">
         <meta name="keywords" content="kernel, ubuntu">
         <link rel="icon" href="/favicon.ico">
 
@@ -81,9 +81,11 @@
         <!-- Content -->
     <div class="container content">
         <p>Lets Test some math</p>
-<p>The area of a circle is $e=mc^2$. Lorem ipsum dolor sit amet, consectetur adipiscing elit. $$x^2$$ Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet. </p>
-<p>\begin{equation} \label{eq} X^2 \end{equation}</p>
-<p>Let's test some syntax highlighting for eq. $\ref{eq}$:</p>
+<p>The area of a circle is <span class="math">\(e=mc^2\)</span>. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+<div class="math">$$x^2$$</div>
+<p> Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet. </p>
+<div class="math">\begin{equation} \label{eq} X^2 \end{equation}</div>
+<p>Let's test some syntax highlighting for eq. <span class="math">\(\ref{eq}\)</span>:</p>
 <div class="highlight"><pre><span></span><span class="cp">#ifndef OPTICAL_FLOW_FILTERFACTORY_H</span>
 <span class="cp">#define OPTICAL_FLOW_FILTERFACTORY_H</span>
 
@@ -134,6 +136,61 @@
 <span class="cp">#endif </span><span class="c1">//OPTICAL_FLOW_FILTERFACTORY_H</span>
 </pre></div>
 <p>Cool, ey?</p>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
 
 
         
