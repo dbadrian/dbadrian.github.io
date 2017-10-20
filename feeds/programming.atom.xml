@@ -3,7 +3,12 @@
 &lt;p&gt;The area of a circle is &lt;span class="formula"&gt;&lt;i&gt;A&lt;/i&gt;&lt;sub&gt;&lt;span class="text"&gt;c&lt;/span&gt;&lt;/sub&gt; = (&lt;i&gt;π&lt;/i&gt; ⁄ 4)&lt;i&gt;d&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Lets Test some math&lt;/p&gt;
 &lt;p&gt;The area of a circle is &lt;span class="formula"&gt;&lt;i&gt;A&lt;/i&gt;&lt;sub&gt;&lt;span class="text"&gt;c&lt;/span&gt;&lt;/sub&gt; = (&lt;i&gt;π&lt;/i&gt; ⁄ 4)&lt;i&gt;d&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/span&gt;. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.&lt;/p&gt;
 &lt;div class="formula"&gt;
+&lt;span class="environment"&gt;&lt;span class="arrayrow"&gt;
+&lt;span class="arraycell align-r"&gt;
 &lt;i&gt;A&lt;/i&gt;&lt;sub&gt;&lt;span class="text"&gt;c&lt;/span&gt;&lt;/sub&gt; = (&lt;i&gt;π&lt;/i&gt; ⁄ 4)&lt;i&gt;d&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt;
+&lt;/span&gt;
+&lt;/span&gt;
+&lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;Let's test some syntax highlighting:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifndef OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
