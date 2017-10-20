@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="empyreum., David B. Adrian">
-        <meta name="keywords" content="">
+        <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur...">
+        <meta name="keywords" content="kernel, ubuntu">
         <link rel="icon" href="/favicon.ico">
 
-        <title>Personal Website of David B. Adrian - empyreum.</title>
+        <title>First Programming Article - empyreum.</title>
 
         <!-- Stylesheets -->
         <link href="/theme/css/all.min.css" rel="stylesheet">
@@ -53,17 +53,24 @@
             <!-- /Static navbar -->
 
             <!-- Header -->
+    <!-- Header -->
     <div class="container header-wrapper">
         <div class="row">
               <div class="col-lg-12">
                   <div class="header-content">
-                      <h1 class="header-title">David B. Adrian</h1>
+                      <h1 class="header-title">First Programming Article</h1>
+                      <p class="header-date">By <a href="/author/david-b-adrian.html">David B. Adrian</a>, Thu 01 May 2014, in category <a href="/category/programming.html">Programming</a></p>
                       <div class="header-underline"></div>
-                      <p class="header-subtitle header-subtitle-homepage">Coding, Research, and Photography</p>
+                      <p class="header-subtitle header-subtitle-homepage"></p>
+                      <div class="clearfix"></div>
+                      <p class="pull-right header-tags">
+                          <span class="glyphicon glyphicon-tags mr5" aria-hidden="true"></span>
+<a href="/tag/kernel.html">kernel</a>, <a href="/tag/ubuntu.html">ubuntu</a>                      </p>
                   </div>
               </div>
         </div>
     </div>
+    <!-- /Header -->
             <!-- /Header -->
 
         </div>
@@ -71,15 +78,64 @@
 
 
         <!-- Content -->
-    
-    <div class="archive-container">
-        <div class="container content archive">
-            <h2><a href="/index.html">Last Posts </a></h2>
-            <dl class="dl-horizontal">
-                <dt>Thu 01 May 2014</dt>
-                <dd><a href="/first-programming-article.html">First Programming Article</a></dd>
-            </dl>
-        </div>
+    <div class="container content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.</p>
+<p>Let's test some syntax highlighting:</p>
+<pre class="literal-block">
+#ifndef OPTICAL_FLOW_FILTERFACTORY_H
+#define OPTICAL_FLOW_FILTERFACTORY_H
+
+#include "common.h"
+#include "IFilterFactory.h"
+
+class FilterFactory : public IFilterFactory {
+public:
+    FilterFactory(float t0, float tk, float tResolution, int xRange, int yRange);
+    virtual void setFilterTransformer(FilterTransformT transform) override;
+    virtual std::shared_ptr&lt;Filter&gt; createFilter(int angle) const override;
+
+private:
+    std::pair&lt;float, float&gt; rotate(int angle, const std::pair&lt;float, float&gt;&amp; vec) const;
+    float gaus(float sigma, float mu, float x) const;
+    std::complex&lt;float&gt; spatial(float x, float y, float fx, float fy) const;
+    float timeMono(float t) const;
+    float timeBi(float t) const;
+
+private:
+    int t0_;
+    int timeSpan_;
+    float tResolution_;
+    int xRange_;
+    int yRange_;
+    int xSize_;
+    int ySize_;
+
+private:
+    FilterTransformT filterTransformer_;
+
+    // filter parameters from paper
+    float sigma;
+    float s1;
+    float s2;
+    float mu_bi1;
+    float sigma_bi1;
+    float mu_bi2;
+    float sigma_bi2;
+    float mu_mono;
+    float sigma_mono;
+    std::pair&lt;float, float&gt; fxy;
+
+    static const float PI_;
+};
+
+
+#endif //OPTICAL_FLOW_FILTERFACTORY_H
+</pre>
+<p>Cool, ey?</p>
+
+
+
+        
     </div>
         <!-- /Content --> 
 
