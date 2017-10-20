@@ -1,58 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>empyreum. - Programming</title><link href="http://dbadrian.github.io/" rel="alternate"></link><link href="http://dbadrian.github.io/feeds/programming.atom.xml" rel="self"></link><id>http://dbadrian.github.io/</id><updated>2014-05-01T10:35:00+02:00</updated><entry><title>First Programming Article</title><link href="http://dbadrian.github.io/first-programming-article.html" rel="alternate"></link><published>2014-05-01T10:35:00+02:00</published><updated>2014-05-01T10:35:00+02:00</updated><author><name>David B. Adrian</name></author><id>tag:dbadrian.github.io,2014-05-01:/first-programming-article.html</id><summary type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.&lt;/p&gt;
 &lt;p&gt;Let's test some syntax highlighting:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#ifndef OPTICAL_FLOW_FILTERFACTORY_H …&lt;/pre&gt;</summary><content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#ifndef OPTICAL_FLOW_FILTERFACTORY_H …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.&lt;/p&gt;
 &lt;p&gt;Let's test some syntax highlighting:&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-#ifndef OPTICAL_FLOW_FILTERFACTORY_H
-#define OPTICAL_FLOW_FILTERFACTORY_H
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#ifndef OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
+&lt;span class="c1"&gt;#define OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
 
-#include "common.h"
-#include "IFilterFactory.h"
+&lt;span class="c1"&gt;#include "common.h"&lt;/span&gt;
+&lt;span class="c1"&gt;#include "IFilterFactory.h"&lt;/span&gt;
 
-class FilterFactory : public IFilterFactory {
-public:
-    FilterFactory(float t0, float tk, float tResolution, int xRange, int yRange);
-    virtual void setFilterTransformer(FilterTransformT transform) override;
-    virtual std::shared_ptr&amp;lt;Filter&amp;gt; createFilter(int angle) const override;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;FilterFactory&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;IFilterFactory&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;FilterFactory&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;t0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;tk&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;tResolution&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;xRange&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;yRange&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;virtual&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;setFilterTransformer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;FilterTransformT&lt;/span&gt; &lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;override&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;virtual&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;shared_ptr&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Filter&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;createFilter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;angle&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt; &lt;span class="n"&gt;override&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-private:
-    std::pair&amp;lt;float, float&amp;gt; rotate(int angle, const std::pair&amp;lt;float, float&amp;gt;&amp;amp; vec) const;
-    float gaus(float sigma, float mu, float x) const;
-    std::complex&amp;lt;float&amp;gt; spatial(float x, float y, float fx, float fy) const;
-    float timeMono(float t) const;
-    float timeBi(float t) const;
+&lt;span class="n"&gt;private&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;pair&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;rotate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;angle&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;pair&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;vec&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;gaus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;sigma&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;mu&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="nb"&gt;complex&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;spatial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;fx&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;fy&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;timeMono&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;timeBi&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-private:
-    int t0_;
-    int timeSpan_;
-    float tResolution_;
-    int xRange_;
-    int yRange_;
-    int xSize_;
-    int ySize_;
+&lt;span class="n"&gt;private&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;t0_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;timeSpan_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;tResolution_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;xRange_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;yRange_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;xSize_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;ySize_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-private:
-    FilterTransformT filterTransformer_;
+&lt;span class="n"&gt;private&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;FilterTransformT&lt;/span&gt; &lt;span class="n"&gt;filterTransformer_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-    // filter parameters from paper
-    float sigma;
-    float s1;
-    float s2;
-    float mu_bi1;
-    float sigma_bi1;
-    float mu_bi2;
-    float sigma_bi2;
-    float mu_mono;
-    float sigma_mono;
-    std::pair&amp;lt;float, float&amp;gt; fxy;
+    &lt;span class="o"&gt;//&lt;/span&gt; &lt;span class="nb"&gt;filter&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;paper&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;sigma&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;mu_bi1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;sigma_bi1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;mu_bi2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;sigma_bi2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;mu_mono&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;sigma_mono&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt;&lt;span class="n"&gt;pair&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;fxy&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
-    static const float PI_;
-};
+    &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;const&lt;/span&gt; &lt;span class="nb"&gt;float&lt;/span&gt; &lt;span class="n"&gt;PI_&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
 
 
-#endif //OPTICAL_FLOW_FILTERFACTORY_H
-&lt;/pre&gt;
+&lt;span class="c1"&gt;#endif //OPTICAL_FLOW_FILTERFACTORY_H&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Cool, ey?&lt;/p&gt;
 </content><category term="ubuntu"></category><category term="kernel"></category></entry></feed>

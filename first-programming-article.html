@@ -81,56 +81,55 @@
     <div class="container content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.</p>
 <p>Let's test some syntax highlighting:</p>
-<pre class="literal-block">
-#ifndef OPTICAL_FLOW_FILTERFACTORY_H
-#define OPTICAL_FLOW_FILTERFACTORY_H
+<div class="highlight"><pre><span></span><span class="c1">#ifndef OPTICAL_FLOW_FILTERFACTORY_H</span>
+<span class="c1">#define OPTICAL_FLOW_FILTERFACTORY_H</span>
 
-#include "common.h"
-#include "IFilterFactory.h"
+<span class="c1">#include "common.h"</span>
+<span class="c1">#include "IFilterFactory.h"</span>
 
-class FilterFactory : public IFilterFactory {
-public:
-    FilterFactory(float t0, float tk, float tResolution, int xRange, int yRange);
-    virtual void setFilterTransformer(FilterTransformT transform) override;
-    virtual std::shared_ptr&lt;Filter&gt; createFilter(int angle) const override;
+<span class="k">class</span> <span class="nc">FilterFactory</span> <span class="p">:</span> <span class="n">public</span> <span class="n">IFilterFactory</span> <span class="p">{</span>
+<span class="n">public</span><span class="p">:</span>
+    <span class="n">FilterFactory</span><span class="p">(</span><span class="nb">float</span> <span class="n">t0</span><span class="p">,</span> <span class="nb">float</span> <span class="n">tk</span><span class="p">,</span> <span class="nb">float</span> <span class="n">tResolution</span><span class="p">,</span> <span class="nb">int</span> <span class="n">xRange</span><span class="p">,</span> <span class="nb">int</span> <span class="n">yRange</span><span class="p">);</span>
+    <span class="n">virtual</span> <span class="n">void</span> <span class="n">setFilterTransformer</span><span class="p">(</span><span class="n">FilterTransformT</span> <span class="n">transform</span><span class="p">)</span> <span class="n">override</span><span class="p">;</span>
+    <span class="n">virtual</span> <span class="n">std</span><span class="p">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Filter</span><span class="o">&gt;</span> <span class="n">createFilter</span><span class="p">(</span><span class="nb">int</span> <span class="n">angle</span><span class="p">)</span> <span class="n">const</span> <span class="n">override</span><span class="p">;</span>
 
-private:
-    std::pair&lt;float, float&gt; rotate(int angle, const std::pair&lt;float, float&gt;&amp; vec) const;
-    float gaus(float sigma, float mu, float x) const;
-    std::complex&lt;float&gt; spatial(float x, float y, float fx, float fy) const;
-    float timeMono(float t) const;
-    float timeBi(float t) const;
+<span class="n">private</span><span class="p">:</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="o">&gt;</span> <span class="n">rotate</span><span class="p">(</span><span class="nb">int</span> <span class="n">angle</span><span class="p">,</span> <span class="n">const</span> <span class="n">std</span><span class="p">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">gaus</span><span class="p">(</span><span class="nb">float</span> <span class="n">sigma</span><span class="p">,</span> <span class="nb">float</span> <span class="n">mu</span><span class="p">,</span> <span class="nb">float</span> <span class="n">x</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="p">::</span><span class="nb">complex</span><span class="o">&lt;</span><span class="nb">float</span><span class="o">&gt;</span> <span class="n">spatial</span><span class="p">(</span><span class="nb">float</span> <span class="n">x</span><span class="p">,</span> <span class="nb">float</span> <span class="n">y</span><span class="p">,</span> <span class="nb">float</span> <span class="n">fx</span><span class="p">,</span> <span class="nb">float</span> <span class="n">fy</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">timeMono</span><span class="p">(</span><span class="nb">float</span> <span class="n">t</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">timeBi</span><span class="p">(</span><span class="nb">float</span> <span class="n">t</span><span class="p">)</span> <span class="n">const</span><span class="p">;</span>
 
-private:
-    int t0_;
-    int timeSpan_;
-    float tResolution_;
-    int xRange_;
-    int yRange_;
-    int xSize_;
-    int ySize_;
+<span class="n">private</span><span class="p">:</span>
+    <span class="nb">int</span> <span class="n">t0_</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">timeSpan_</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">tResolution_</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">xRange_</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">yRange_</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">xSize_</span><span class="p">;</span>
+    <span class="nb">int</span> <span class="n">ySize_</span><span class="p">;</span>
 
-private:
-    FilterTransformT filterTransformer_;
+<span class="n">private</span><span class="p">:</span>
+    <span class="n">FilterTransformT</span> <span class="n">filterTransformer_</span><span class="p">;</span>
 
-    // filter parameters from paper
-    float sigma;
-    float s1;
-    float s2;
-    float mu_bi1;
-    float sigma_bi1;
-    float mu_bi2;
-    float sigma_bi2;
-    float mu_mono;
-    float sigma_mono;
-    std::pair&lt;float, float&gt; fxy;
+    <span class="o">//</span> <span class="nb">filter</span> <span class="n">parameters</span> <span class="kn">from</span> <span class="nn">paper</span>
+    <span class="nb">float</span> <span class="n">sigma</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">s1</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">s2</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">mu_bi1</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">sigma_bi1</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">mu_bi2</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">sigma_bi2</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">mu_mono</span><span class="p">;</span>
+    <span class="nb">float</span> <span class="n">sigma_mono</span><span class="p">;</span>
+    <span class="n">std</span><span class="p">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="o">&gt;</span> <span class="n">fxy</span><span class="p">;</span>
 
-    static const float PI_;
-};
+    <span class="n">static</span> <span class="n">const</span> <span class="nb">float</span> <span class="n">PI_</span><span class="p">;</span>
+<span class="p">};</span>
 
 
-#endif //OPTICAL_FLOW_FILTERFACTORY_H
-</pre>
+<span class="c1">#endif //OPTICAL_FLOW_FILTERFACTORY_H</span>
+</pre></div>
 <p>Cool, ey?</p>
 
 
