@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Disclaimer Some of the entries are automatically generated (e.g, from google scholar), and I don&#39;t guarantee total accuracy for the fine prints. If you have any questions, please let me know.">
+        <meta name="description" content="Disclaimer Some of the entries are automatically generated (e.g, from google scholar), and I don&#39;t guarantee total accuracy for the fine prints. If you have any questions, please let me know....">
         <meta name="keywords" content="">
         <link rel="icon" href="/favicon.ico">
 
@@ -72,16 +72,20 @@
 
         <!-- Content -->
     <div class="container content">
-        <h1>Disclaimer</h1>
+        <div class="section" id="disclaimer">
+<h2>Disclaimer</h2>
 <p>Some of the entries are automatically generated (e.g, from google scholar), and I don't guarantee total accuracy for the fine prints.
 If you have any questions, please let me know.</p>
+</div>
+<div class="section" id="publications-reports-and-theses">
+<h2>Publications, Reports, and Theses</h2>
+<table class="display" id="pubTable"></table>
+<script>
+bibtexify("/bib/ref.bib", "pubTable");
+</script><p>Generated with <a class="reference external" href="https://github.com/vkaravir/bib-publication-list">this great tool</a>!</p>
+</div>
 
-          <h1>Publications, Reports, and Theses </h1>
-          <table id="pubTable" class="display"></table>
-          <script>
-            bibtexify("/bib/ref.bib", "pubTable");
-          </script>
-          Generated with <a href="https://github.com/vkaravir/bib-publication-list ">this great tool</a>!
+
     </div>
         <!-- /Content --> 
 
