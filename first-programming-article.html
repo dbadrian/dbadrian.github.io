@@ -84,55 +84,54 @@
 <p>The area of a circle is $e=mc^2$. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim lorem consequat, malesuada dolor quis, gravida est. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae pulvinar nisl. Vestibulum blandit risus enim, in pharetra felis rutrum sit amet.</p>
 <p>begin{equation} \label{eq} X^2 \end{equation}</p>
 <p>Let's test some syntax highlighting for eq. $\ref{eq}$:</p>
-<p>.. code-block:: c++</p>
-<div class="highlight"><pre><span></span><span class="err">#</span><span class="nx">ifndef</span> <span class="nx">OPTICAL_FLOW_FILTERFACTORY_H</span>
-<span class="err">#</span><span class="nx">define</span> <span class="nx">OPTICAL_FLOW_FILTERFACTORY_H</span>
+<div class="highlight"><pre><span></span><span class="cp">#ifndef OPTICAL_FLOW_FILTERFACTORY_H</span>
+<span class="cp">#define OPTICAL_FLOW_FILTERFACTORY_H</span>
 
-<span class="err">#</span><span class="nx">include</span> <span class="s2">"common.h"</span>
-<span class="err">#</span><span class="nx">include</span> <span class="s2">"IFilterFactory.h"</span>
+<span class="cp">#include</span> <span class="cpf">"common.h"</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">"IFilterFactory.h"</span><span class="cp"></span>
 
-<span class="kr">class</span> <span class="nx">FilterFactory</span> : <span class="kt">public</span> <span class="nx">IFilterFactory</span> <span class="p">{</span>
-<span class="kr">public</span><span class="o">:</span>
-    <span class="nx">FilterFactory</span><span class="p">(</span><span class="kr">float</span> <span class="nx">t0</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">tk</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">tResolution</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">xRange</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">yRange</span><span class="p">);</span>
-    <span class="nx">virtual</span> <span class="k">void</span> <span class="nx">setFilterTransformer</span><span class="p">(</span><span class="nx">FilterTransformT</span> <span class="nx">transform</span><span class="p">)</span> <span class="nx">override</span><span class="p">;</span>
-    <span class="nx">virtual</span> <span class="nx">std</span><span class="o">::</span><span class="nx">shared_ptr</span><span class="o">&lt;</span><span class="nx">Filter</span><span class="o">&gt;</span> <span class="nx">createFilter</span><span class="p">(</span><span class="kr">int</span> <span class="nx">angle</span><span class="p">)</span> <span class="kr">const</span> <span class="nx">override</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">FilterFactory</span> <span class="o">:</span> <span class="k">public</span> <span class="n">IFilterFactory</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">FilterFactory</span><span class="p">(</span><span class="kt">float</span> <span class="n">t0</span><span class="p">,</span> <span class="kt">float</span> <span class="n">tk</span><span class="p">,</span> <span class="kt">float</span> <span class="n">tResolution</span><span class="p">,</span> <span class="kt">int</span> <span class="n">xRange</span><span class="p">,</span> <span class="kt">int</span> <span class="n">yRange</span><span class="p">);</span>
+    <span class="k">virtual</span> <span class="kt">void</span> <span class="nf">setFilterTransformer</span><span class="p">(</span><span class="n">FilterTransformT</span> <span class="n">transform</span><span class="p">)</span> <span class="k">override</span><span class="p">;</span>
+    <span class="k">virtual</span> <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Filter</span><span class="o">&gt;</span> <span class="n">createFilter</span><span class="p">(</span><span class="kt">int</span> <span class="n">angle</span><span class="p">)</span> <span class="k">const</span> <span class="k">override</span><span class="p">;</span>
 
-<span class="kr">private</span><span class="o">:</span>
-    <span class="nx">std</span><span class="o">::</span><span class="nx">pair</span><span class="o">&lt;</span><span class="kr">float</span><span class="p">,</span> <span class="kr">float</span><span class="o">&gt;</span> <span class="nx">rotate</span><span class="p">(</span><span class="kr">int</span> <span class="nx">angle</span><span class="p">,</span> <span class="kr">const</span> <span class="nx">std</span><span class="o">::</span><span class="nx">pair</span><span class="o">&lt;</span><span class="kr">float</span><span class="p">,</span> <span class="kr">float</span><span class="o">&gt;&amp;</span> <span class="nx">vec</span><span class="p">)</span> <span class="kr">const</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">gaus</span><span class="p">(</span><span class="kr">float</span> <span class="nx">sigma</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">mu</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">x</span><span class="p">)</span> <span class="kr">const</span><span class="p">;</span>
-    <span class="nx">std</span><span class="o">::</span><span class="nx">complex</span><span class="o">&lt;</span><span class="kr">float</span><span class="o">&gt;</span> <span class="nx">spatial</span><span class="p">(</span><span class="kr">float</span> <span class="nx">x</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">y</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">fx</span><span class="p">,</span> <span class="kr">float</span> <span class="nx">fy</span><span class="p">)</span> <span class="kr">const</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">timeMono</span><span class="p">(</span><span class="kr">float</span> <span class="nx">t</span><span class="p">)</span> <span class="kr">const</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">timeBi</span><span class="p">(</span><span class="kr">float</span> <span class="nx">t</span><span class="p">)</span> <span class="kr">const</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">rotate</span><span class="p">(</span><span class="kt">int</span> <span class="n">angle</span><span class="p">,</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;&amp;</span> <span class="n">vec</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="nf">gaus</span><span class="p">(</span><span class="kt">float</span> <span class="n">sigma</span><span class="p">,</span> <span class="kt">float</span> <span class="n">mu</span><span class="p">,</span> <span class="kt">float</span> <span class="n">x</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">complex</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">spatial</span><span class="p">(</span><span class="kt">float</span> <span class="n">x</span><span class="p">,</span> <span class="kt">float</span> <span class="n">y</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fx</span><span class="p">,</span> <span class="kt">float</span> <span class="n">fy</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="nf">timeMono</span><span class="p">(</span><span class="kt">float</span> <span class="n">t</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="nf">timeBi</span><span class="p">(</span><span class="kt">float</span> <span class="n">t</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 
-<span class="kr">private</span><span class="o">:</span>
-    <span class="kr">int</span> <span class="nx">t0_</span><span class="p">;</span>
-    <span class="kr">int</span> <span class="nx">timeSpan_</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">tResolution_</span><span class="p">;</span>
-    <span class="kr">int</span> <span class="nx">xRange_</span><span class="p">;</span>
-    <span class="kr">int</span> <span class="nx">yRange_</span><span class="p">;</span>
-    <span class="kr">int</span> <span class="nx">xSize_</span><span class="p">;</span>
-    <span class="kr">int</span> <span class="nx">ySize_</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">t0_</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">timeSpan_</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">tResolution_</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">xRange_</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">yRange_</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">xSize_</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ySize_</span><span class="p">;</span>
 
-<span class="kr">private</span><span class="o">:</span>
-    <span class="nx">FilterTransformT</span> <span class="nx">filterTransformer_</span><span class="p">;</span>
+<span class="k">private</span><span class="o">:</span>
+    <span class="n">FilterTransformT</span> <span class="n">filterTransformer_</span><span class="p">;</span>
 
     <span class="c1">// filter parameters from paper</span>
-    <span class="kr">float</span> <span class="nx">sigma</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">s1</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">s2</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">mu_bi1</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">sigma_bi1</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">mu_bi2</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">sigma_bi2</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">mu_mono</span><span class="p">;</span>
-    <span class="kr">float</span> <span class="nx">sigma_mono</span><span class="p">;</span>
-    <span class="nx">std</span><span class="o">::</span><span class="nx">pair</span><span class="o">&lt;</span><span class="kr">float</span><span class="p">,</span> <span class="kr">float</span><span class="o">&gt;</span> <span class="nx">fxy</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">sigma</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">s1</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">s2</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">mu_bi1</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">sigma_bi1</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">mu_bi2</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">sigma_bi2</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">mu_mono</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">sigma_mono</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">fxy</span><span class="p">;</span>
 
-    <span class="kr">static</span> <span class="kr">const</span> <span class="kr">float</span> <span class="nx">PI_</span><span class="p">;</span>
+    <span class="k">static</span> <span class="k">const</span> <span class="kt">float</span> <span class="n">PI_</span><span class="p">;</span>
 <span class="p">};</span>
 
 
-<span class="err">#</span><span class="nx">endif</span> <span class="c1">//OPTICAL_FLOW_FILTERFACTORY_H</span>
+<span class="cp">#endif </span><span class="c1">//OPTICAL_FLOW_FILTERFACTORY_H</span>
 </pre></div>
 <p>Cool, ey?</p>
 
