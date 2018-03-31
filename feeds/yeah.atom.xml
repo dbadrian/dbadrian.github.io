@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>empyreum. - yeah</title><link href="http://dbadrian.github.io/" rel="alternate"></link><link href="http://dbadrian.github.io/feeds/yeah.atom.xml" rel="self"></link><id>http://dbadrian.github.io/</id><updated>2018-03-31T11:00:00+02:00</updated><entry><title>My super title</title><link href="http://dbadrian.github.io/my-super-post.html" rel="alternate"></link><published>2018-03-31T11:00:00+02:00</published><updated>2018-03-31T11:00:00+02:00</updated><author><name>David Adrian</name></author><id>tag:dbadrian.github.io,2018-03-31:/my-super-post.html</id><summary type="html">&lt;p class="first last"&gt;Short version for index and feeds&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;This is a test post and will removed in due time.&lt;/p&gt;
+</content><category term="thats"></category><category term="awesome"></category></entry></feed>
