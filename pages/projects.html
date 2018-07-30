@@ -86,7 +86,7 @@
 <div class="section" id="eknog-a-framework-for-embedding-knowledge-graphs">
 <h2><a class="toc-backref" href="#id1">eknog - A framework for embedding knowledge graphs</a></h2>
 <p>Find <a class="reference external" href="https://github.com/dbadrian/eknog">eknog</a> on Github! [soon...]</p>
-<p>eknog (Embedding Knowledge Graphs) is a Python+Tensorflow project allowing for the easy training of latent feature representations (=embeddings) of knowledge graphs (KG). It provides reference implementations of some of the recent and popular models (e.g., TransE, TorusE, DistMult, ComplEx) and it should be reasonably easy to models which are simple variations of these.</p>
+<p>eknog (Embedding Knowledge Graphs) is a Python+Tensorflow project allowing for the easy training of latent feature representations (=embeddings) of knowledge graphs (KG). It provides reference implementations of some of the recent and popular models (e.g., TransE, TorusE, DistMult, ComplEx) and it should be reasonably easy to implement models which are simple variations of these. There is only very limited support for CNN-model like ConvE, which requires special training procedures (e.g., what they call 1-N evaluation).</p>
 <p>It is currently in a review and refactoring process as preparation for a release together with a publication - please bear with me, if it is temporarily unavailable.</p>
 <p>This was developed at <a class="reference external" href="http://mercateo.com">Mercateo</a> - thanks!</p>
 </div>
@@ -96,6 +96,7 @@
 <p>Muninn is a small personal project to maintain, backup, synchronize dotfiles, maintain tools (e.g., sublime, zsh), as well as install various programs and libraries (e.g., compile Tensorflow from source with appropriate optimizations enabled). It never was and is not meant to be a general, ready plug'n'play tool for everyone, but strong inclination towards Arch Linux support (and using Anaconda), as that is my primary setup. Shouldn't be too hard our just copy-paste the dotfiles (which are kept in an extra repository).</p>
 <p>Various tasks, which include symlinking dotfiles or compiling a program, are defined as packages (realized a python module). The syntax is still changing, but generally it is quite heavily inspired by how PKGBUILD files are defined for Arch Linux.
 One can define dependencies between different Muninn-packages, as well as Arch Linux packages (hence the strong bias towards Arch). For example, an empty package, but with many Arch Linux dependencies can be used to quickly install common packages for Arch Linux after a fresh installation.</p>
+<p>However, I am rewriting most of the code from scratch right now, which will soften those requirements.</p>
 </div>
 <div class="section" id="ebof-bio-inspired-event-based-optical-flow">
 <h2><a class="toc-backref" href="#id3">EBOF - (Bio-inspired) Event-based Optical Flow</a></h2>
