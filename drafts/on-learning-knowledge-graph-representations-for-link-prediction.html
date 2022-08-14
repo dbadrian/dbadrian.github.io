@@ -83,15 +83,15 @@
         <!-- Content -->
     <div class="container content">
         <div class="contents topic" id="table-of-contents">
-<p class="topic-title first"><strong>Table of Contents</strong></p>
+<p class="topic-title"><strong>Table of Contents</strong></p>
 <ul class="simple">
-<li><a class="reference internal" href="#introduction" id="id5">Introduction</a></li>
-<li><a class="reference internal" href="#state-of-the-art" id="id6">State-of-the-art</a></li>
-<li><a class="reference internal" href="#rmult-a-simple-but-universal-factorization-model-for-knowledge-graph-completion" id="id7">RMult: A Simple But Universal Factorization Model for Knowledge Graph Completion</a></li>
+<li><a class="reference internal" href="#introduction" id="toc-entry-1">Introduction</a></li>
+<li><a class="reference internal" href="#state-of-the-art" id="toc-entry-2">State-of-the-art</a></li>
+<li><a class="reference internal" href="#rmult-a-simple-but-universal-factorization-model-for-knowledge-graph-completion" id="toc-entry-3">RMult: A Simple But Universal Factorization Model for Knowledge Graph Completion</a></li>
 </ul>
 </div>
 <div class="section" id="introduction">
-<h2><a class="toc-backref" href="#id5">Introduction</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-1">Introduction</a></h2>
 <p>Note: If you are more interested in the purely scientific version of this article, check out <a class="reference external" href="http://still_waiting.com">our paper on arvix</a>!</p>
 <p>When I started my Master's Thesis my topic was as general as possible: Find something cool (=publishable) with regards to Knowledge Graphs (KG). Having zero previous experience with the topic (similarly for my supervisors), I had a challenging start of reading up the last few years of research.</p>
 <p>Very quickly I realized that a bulk of recent research concentrated on modifying well established models, in particular <em>TransE</em> (a very simple and constrained, but surprisingly good model inspired by Word2Vec).</p>
@@ -100,45 +100,45 @@
 And as in every other area, neural networks are on the rise. Two interesting models are <a class="reference external" href="https://arxiv.org/abs/1703.06103">R-GCN</a> and <a class="reference external" href="https://arxiv.org/abs/1707.01476">ConvE</a> (although the latter is considerably simpler, faster, and better). Some concerns about the implementation and evaluation off the latter was brought up lately (<a class="reference external" href="https://github.com/TimDettmers/ConvE/issues">see issue section</a>), but it still seems to be reasonably decent.</p>
 </div>
 <div class="section" id="state-of-the-art">
-<h2><a class="toc-backref" href="#id6">State-of-the-art</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-2">State-of-the-art</a></h2>
 <p>Soon (TM)</p>
 </div>
 <div class="section" id="rmult-a-simple-but-universal-factorization-model-for-knowledge-graph-completion">
-<h2><a class="toc-backref" href="#id7">RMult: A Simple But Universal Factorization Model for Knowledge Graph Completion</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-3">RMult: A Simple But Universal Factorization Model for Knowledge Graph Completion</a></h2>
 <p>So, the question of my thesis can be scoped a little bit. How can I approve upon these models. Faster? Better? Smaller? All?</p>
 <p>If I were to make a wish-list, based on the advantages of each model, it boils down to this:</p>
 <blockquote>
 <ol class="arabic simple">
-<li>Universal <a class="footnote-reference" href="#universality" id="id1">[1]</a>  (unlike DistMult or TransE)</li>
-<li>No unnecessary computations (unlike ComplEx <a class="footnote-reference" href="#uncomp" id="id2">[2]</a>)</li>
-<li>Real-valued <a class="footnote-reference" href="#realvalued" id="id3">[3]</a> (unlike ComplEx)</li>
+<li>Universal <a class="footnote-reference" href="#universality" id="footnote-reference-1">[1]</a>  (unlike DistMult or TransE)</li>
+<li>No unnecessary computations (unlike ComplEx <a class="footnote-reference" href="#uncomp" id="footnote-reference-2">[2]</a>)</li>
+<li>Real-valued <a class="footnote-reference" href="#realvalued" id="footnote-reference-3">[3]</a> (unlike ComplEx)</li>
 <li>Linear space- and computational complexity (unlike RESCAL)</li>
-<li>Parameter efficient <a class="footnote-reference" href="#parameff" id="id4">[4]</a> (like ConvE)</li>
+<li>Parameter efficient <a class="footnote-reference" href="#parameff" id="footnote-reference-4">[4]</a> (like ConvE)</li>
 <li>Achieves state-of-the-art results (like ConvE)</li>
 </ol>
 </blockquote>
 <table class="docutils footnote" frame="void" id="universality" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>This term is adopted from CITEPAPER, and simply refers to the ability of a model to represent any given KG, given that the embedding dimension is chosen sufficiently large. Both DistMult and TransE do not fulfill that requirement, and these constraints become evident during evaluation.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-1">[1]</a></td><td>This term is adopted from CITEPAPER, and simply refers to the ability of a model to represent any given KG, given that the embedding dimension is chosen sufficiently large. Both DistMult and TransE do not fulfill that requirement, and these constraints become evident during evaluation.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="uncomp" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>While ComplEx can represent both symmetric and asymmetric relations, it does so by zeroing out either the real or imaginary part of the relation embedding. Although this seems like a naturally representation, it does carry out several multiplications which do not directly contribute to the final score.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-2">[2]</a></td><td>While ComplEx can represent both symmetric and asymmetric relations, it does so by zeroing out either the real or imaginary part of the relation embedding. Although this seems like a naturally representation, it does carry out several multiplications which do not directly contribute to the final score.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="realvalued" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>ComplEx is a powerful model by itself, but there is a large body of research concerned with integrating other modalities, such as images or text, to improve the embedding quality. Combination of real-valued and complex-valued systems is not straightforward, so I claim that a purely real-valued model is easier to work with for the time being.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-3">[3]</a></td><td>ComplEx is a powerful model by itself, but there is a large body of research concerned with integrating other modalities, such as images or text, to improve the embedding quality. Combination of real-valued and complex-valued systems is not straightforward, so I claim that a purely real-valued model is easier to work with for the time being.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="parameff" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>ConvE made strong claims about its parameter efficiency (= number of free parameters required to achieve a certain accuracy). While the bugs found decreases that quality, it still seems considerably more efficient than a standard DistMult and ComplEx.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#footnote-reference-4">[4]</a></td><td>ConvE made strong claims about its parameter efficiency (= number of free parameters required to achieve a certain accuracy). While the bugs found decreases that quality, it still seems considerably more efficient than a standard DistMult and ComplEx.</td></tr>
 </tbody>
 </table>
 </div>
