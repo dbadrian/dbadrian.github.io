@@ -77,6 +77,8 @@
       
     
     
+      <link rel="stylesheet" href="../css/bib-list.min.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -135,6 +137,14 @@
         .md-header {
             /* Background pattern from Toptal Subtle Patterns */
             
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/header.jpg');
+            
+            
+            background-position: center center;
+            
+            background-size: cover;
+            height: 400px;
+            width: 100%;
          }
     </style>
     <nav class="md-header__inner md-grid" aria-label="Header">
@@ -232,18 +242,6 @@
 </div>
     
     
-      <div class="md-header__source">
-        <a href="https://github.com/dbadrian" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-      </div>
-    
   </nav>
   
 </header>
@@ -278,18 +276,6 @@
     </a>
     .dba
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/dbadrian" title="Go to repository" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    GitHub
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -461,118 +447,22 @@
                 
                   
 
-  
-  
-
 
 <h1 id="publications-reports-and-theses">Publications, Reports, and Theses<a class="headerlink" href="#publications-reports-and-theses" title="Permanent link">&para;</a></h1>
-<p><link rel="stylesheet" href="../css/bib-list.min.css" type="text/css" /></p>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-
-<script src="../javascripts/bib-list.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <div id="bib-publication-list">
     <table></table>
 </div>
-<!-- <script> bibtexify("../ref.bib", "pubTable", {visualization: true}); </script> -->
-
-<pre id="bibtex">
-
-@inproceedings{graf_learning_2023,
-    series = {Proceedings of {Machine} {Learning} {Research}},
-    title = {Learning {Dense} {Visual} {Descriptors} using {Image} {Augmentations} for {Robot} {Manipulation} {Tasks}},
-    volume = {205},
-    url = {https://proceedings.mlr.press/v205/graf23a.html},
-    abstract = {We propose a self-supervised training approach for learning view-invariant dense visual descriptors using image augmentations. Unlike existing works, which often require complex datasets, such as registered RGBD sequences, we train on an unordered set of RGB images. This allows for learning from a single camera view, e.g., in an existing robotic cell with a fix-mounted camera. We create synthetic views and dense pixel correspondences using data augmentations. We find our descriptors are competitive to the existing methods, despite the simpler data recording and setup requirements. We show that training on synthetic correspondences provides descriptor consistency across a broad range of camera views. We compare against training with geometric correspondence from multiple views and provide ablation studies. We also show a robotic bin-picking experiment using descriptors learned from a fix-mounted camera for defining grasp preferences.},
-    booktitle = {Proceedings of {The} 6th {Conference} on {Robot} {Learning}},
-    publisher = {PMLR},
-    author = {Graf, Christian and Adrian, David B. and Weil, Joshua and Gabriel, Miroslav and Schillinger, Philipp and Spies, Markus and Neumann, Heiko and Kupcsik, Andras Gabor},
-    editor = {Liu, Karen and Kulic, Dana and Ichnowski, Jeff},
-    month = dec,
-    year = {2023},
-    pages = {871--880},
-}
-
-@phdthesis{adrian_simple_2018,
-    type = {Master Thesis},
-    title = {A {Simple} but {Universal} {Factorization} {Model} for {Embedding} {Knowledge} {Graphs}},
-    author = {Adrian, David B.},
-    year = {2018},
-}
-
-@phdthesis{adrian_development_2013,
-    type = {Bachelor {Thesis}},
-    title = {Development of a {Depth}-{Augmented} {Dynamic} {Vision} {Sensor} for {3D} {SLAM}},
-    url = {https://mediatum.ub.tum.de/doc/1192163/989741.pdf},
-    author = {Adrian, David B.},
-    year = {2013},
-}
-
-@inproceedings{adrian_efficient_2022,
-    title = {Efficient and {Robust} {Training} of {Dense} {Object} {Nets} for {Multi}-{Object} {Robot} {Manipulation}},
-    doi = {10.1109/ICRA46639.2022.9812274},
-    booktitle = {2022 {International} {Conference} on {Robotics} and {Automation} ({ICRA})},
-    author = {Adrian, David B. and Kupcsik, Andras Gabor and Spies, Markus and Neumann, Heiko},
-    year = {2022},
-    pages = {1562--1568},
-}
-
-@book{abdic_future_2015,
-    title = {The {Future} of {Education}: {Trend} {Report} 2015},
-    publisher = {Center for Digital Technology and Management},
-    author = {Abdic, Irman and Adrian, David B and Borrow, Benjamin and Brander, Benedikt and Braun, Michael and Burger, Bastian and Frank, Fabian and Holzer, Alexander and Iwan, Stefan and Korbely, Stephanie and Kreil, Annika and Maier, Simon and Miksch, Michael and Nadeem, Asif and Poppek, Isabel and Rausch, Johannes and Ravindran, Aishwarya and Roos, Julian and Rüchardt, Valentin and Shafei, Ahmed and Strobel, Maximilian and Tischinger, Stefan and Wilk, Nathalie and Zaheer, Hassan},
-    year = {2015},
-}
-
-@inproceedings{weikersdorfer_event-based_2014,
-    title = {Event-based {3D} {SLAM} with a depth-augmented dynamic vision sensor},
-    url = {https://mediatum.ub.tum.de/doc/1192158/84014.pdf},
-    booktitle = {Robotics and {Automation} ({ICRA}), 2014 {IEEE} {International} {Conference} on},
-    publisher = {IEEE},
-    author = {Weikersdorfer, David and Adrian, David B and Cremers, Daniel and Conradt, Jörg},
-    year = {2014},
-    pages = {359--364},
-}
-
-@inproceedings{mukuta_weakly_2018,
-    title = {Weakly supervised collective feature learning from curated media},
-    url = {https://arxiv.org/abs/1802.04668},
-    booktitle = {The {Thirty}-{Second} {AAAI} {Conference} on {Artificial} {Intelligence} ({AAAI}-18)},
-    author = {Mukuta, Yusuke and Kimura, Akisato and Adrian, David B and Ghahramani, Zoubin},
-    year = {2018},
-}
-
-@unpublished{weikersdorfer_event-based_2013,
-    address = {Tutzing},
-    type = {Poster},
-    title = {Event-based {3D} {SLAM}, {Bernstein} {Sparks} {Workshop} on {NeuroEngineering}},
-    author = {Weikersdorfer, D. and Adrian, D. and Conradt, J.},
-    year = {2013},
-}
-
-@unpublished{kosiorek_efficient_2015,
-    type = {"{Course} {Project} {Report}"},
-    title = {An {Efficient} {Event}-{Based} {Optical} {Flow} {Implementation} in {C}/{C}++ and {CUDA}},
-    url = {https://www.nst.ei.tum.de/fileadmin/w00bqs/www/publications/pp/2015SS-PP-RealTimeDVSOpticFlow.pdf},
-    author = {Kosiorek, Adam and Adrian, David and Rausch, Johannes},
-    year = {2015},
-}
-
-</pre>
-
-<!-- <script> 
-$(function(){
-  $("#bibtex").load("../ref.bib"); 
-});
-</script>  -->
-
+<pre id="bibtex"></pre>
 <script type="text/javascript">
-    $(document).ready(function() {
-    bibtexify("#bibtex", "bib-publication-list");
-    });
+    $(document).ready(
+        function() {
+            $("#bibtex").load("../ref.bib", function() {
+            bibtexify("#bibtex", "bib-publication-list"); });
+        }
+    );
 </script>
-
-<p>Generated with <a href="https://github.com/vkaravir/bib-publication-list">this great tool</a></p>
 
 
   
@@ -629,8 +519,6 @@ $(function(){
   
 
 
-  
-
 
 
 
@@ -650,19 +538,6 @@ $(function(){
           <input type="checkbox" name="analytics" >
           <span class="task-list-indicator"></span>
           Google Analytics
-        </label>
-      </li>
-    
-      
-      
-        
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="github" checked>
-          <span class="task-list-indicator"></span>
-          GitHub
         </label>
       </li>
     
@@ -698,6 +573,10 @@ $(function(){
     
     
       <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="../javascripts/jquery.min.js"></script>
+      
+        <script src="../javascripts/bib-list.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
